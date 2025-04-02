@@ -7,6 +7,8 @@ const theme = createTheme({
   typography: {
     fontFamily: [
       'Bebas Neue',
+      'Manrope',
+      'Inter'
     ].join(','),
   },
 })
