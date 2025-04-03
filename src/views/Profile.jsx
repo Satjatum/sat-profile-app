@@ -1,12 +1,11 @@
 import React from 'react'
-import MyProfile from '../assets/MyProfile.jpg'
+import MyProfile from '../assets/MyProfile.png'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { Box, AppBar, Toolbar, Typography, Button, Avatar, Fab } from '@mui/material'
-import { TextField } from '@mui/material'
+import { Box, AppBar, Toolbar, Typography, Button, Avatar, Fab, TextField, Divider } from '@mui/material'
 import { Link } from 'react-router-dom';
 
 
@@ -34,57 +33,20 @@ function Profile() {
             </Box>
 
             {/* Content */}
-            <Box sx={{ bgcolor: 'black', display: 'flex', borderBottom: '1px solid #484848', }}>
-                <Box sx={{ ml: '310px', my: '210px' }}>
-                    <Box sx={{ width: '580px' }}>
-                        <Typography sx={{ fontSize: '101px', color: 'white', lineHeight: 1 }}>
-                            HI, I AM
-                        </Typography>
-                        <Typography sx={{ fontSize: '101px', color: 'white', lineHeight: 1 }}>
-                            SATJATUM K.
-                        </Typography>
-                        <Typography sx={{ fontSize: '18px', fontFamily: 'Manrope', color: '#C7C7C7' }}>
-                            นักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์จากประเทศไทย ที่มีความหลงใหลในการสร้าง เว็บไซต์ที่เข้าถึงได้และเป็นมิตรกับผู้ใช้
-                        </Typography>
-                        <Button variant='contained' sx={{ fontSize: '16px', fontFamily: 'Manrope', fontWeight: 'bold', color: 'black', bgcolor: '#d3e07A', width: '187px', height: '54px', borderRadius: '100px', my: '40px', gap: '12px', }}>
-                            Contact Me <ArrowOutwardIcon />
-                        </Button>
-                        <Fab sx={{ bgcolor: '#222222', mx: '16px' }}>
-                            <LinkedInIcon sx={{ color: '#d3e07A' }} />
-                        </Fab>
-                        <Fab sx={{ bgcolor: '#222222' }}>
-                            <GitHubIcon sx={{ color: '#d3e07A' }} />
-                        </Fab>
-                    </Box>
-                </Box>
-                <Box>
-                    <Avatar variant='square' src={MyProfile} sx={{ width: '571.21px', height: '667px', my: '52px', ml: '60px', borderRadius: '20px' }} />
-                </Box>
-            </Box>
-
-
-
-
-            {/* About */}
-            <Box sx={{ bgcolor: 'black', borderBottom: '1px solid #484848' }}>
-                <Box sx={{ display: 'flex', }}>
-                    <Box sx={{ ml: '330px', my: '50px' }}>
-                        <Box sx={{ width: '307px' }}>
-                            <Typography sx={{ fontSize: '101px', color: 'white' }}>
-                                ABOUT ME
+            <Box sx={{ bgcolor: 'black', display: 'flex', flexDirection: 'column' }}>
+                <Box sx={{ display: 'flex' }}>
+                    <Box sx={{ ml: '310px', my: '210px' }}>
+                        <Box sx={{ width: '580px' }}>
+                            <Typography sx={{ fontSize: '101px', color: 'white', lineHeight: 1 }}>
+                                HI, I AM
                             </Typography>
-                        </Box>
-                    </Box>
-                    <Box sx={{ ml: '200px', my: '100px' }}>
-                        <Box sx={{ width: '720px' }}>
-                            <Typography sx={{ fontSize: '32px', fontFamily: 'Manrope', color: 'white', lineHeight: '140%' }}>
-                                ผมเป็นนักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์ที่ทำงานอยู่ใน กรุงเทพฯ กำลังมองหาโอกาสที่น่าตื่นเต้นในการทำงาน มีพื้นฐานการศึกษาด้านวิศวกรรมซอฟต์แวร์
+                            <Typography sx={{ fontSize: '101px', color: 'white', lineHeight: 1 }}>
+                                SATJATUM K.
                             </Typography>
-                            <Typography sx={{ fontSize: '18px', fontFamily: 'Manrope', color: '#C7C7C7', lineHeight: '150%' }}>
-                                ชอบให้ความสำคัญกับการเข้าถึง (accessibility) เมื่อพัฒนาเว็บไซต์ มีความกระตือรือร้นและอยากรู้ อยากเห็นเกี่ยวกับการแก้ปัญหาต่างๆ ปัจจุบันกำลังศึกษาเรียนรู้เกี่ยวกับ React.js และการออกแบบ เว็บไซต์เล็กน้อยเมื่อไม่ได้เขียนโปรแกรม ดิฉัน/ผมชอบเล่นฟุตบอล ถ่ายภาพ และเล่นเกม FIFA, Diablo กำลังเรียนรู้เพิ่มเติมเพื่อพัฒนาทักษะอยู่เสมอ
+                            <Typography sx={{ fontSize: '18px', fontFamily: 'Manrope', color: '#C7C7C7' }}>
+                                นักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์จากประเทศไทย ที่มีความหลงใหลในการสร้าง เว็บไซต์ที่เข้าถึงได้และเป็นมิตรกับผู้ใช้
                             </Typography>
-                            <Button variant='contained' sx={{ fontSize: '16px', fontFamily: 'Manrope', fontWeight: 'bold', color: 'black', bgcolor: '#d3e07A', width: '244px', height: '54px', borderRadius: '100px', my: '40px', gap: '12px', }}>
-                                DOWNLOAD RESUME<ArrowOutwardIcon />
+                            <Button variant='contained' sx={{ fontSize: '16px', fontFamily: 'Manrope', fontWeight: 'bold', color: 'black', bgcolor: '#d3e07A', width: '187px', height: '54px', borderRadius: '100px', my: '40px', gap: '12px', }}> Contact Me <ArrowOutwardIcon />
                             </Button>
                             <Fab sx={{ bgcolor: '#222222', mx: '16px' }}>
                                 <LinkedInIcon sx={{ color: '#d3e07A' }} />
@@ -94,14 +56,56 @@ function Profile() {
                             </Fab>
                         </Box>
                     </Box>
+                    <Box>
+                        <Avatar variant='square' src={MyProfile} sx={{ width: '571.21px', height: '667px', my: '52px', ml: '60px', borderRadius: '20px', }} />
+                    </Box>
                 </Box>
+                <Box sx={{ width: '1440px', borderBottom: '1px solid #484848', mx: 'auto' }} />
             </Box>
 
 
 
 
+            {/* About */}
+            <Box sx={{ bgcolor: 'black', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <Box sx={{ display: 'flex', my: '50px' }}>
+                    <Box sx={{ width: '307px' }}>
+                        <Typography sx={{ fontSize: '101px', color: 'white' }}>
+                            ABOUT ME
+                        </Typography>
+                    </Box>
+                    <Box sx={{ ml: '200px', my: '50px' }}>
+                        <Box sx={{ width: '720px' }}>
+                            <Typography sx={{ fontSize: '32px', fontFamily: 'Manrope', color: 'white', lineHeight: '140%' }}>
+                                ผมเป็นนักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์ที่ทำงานอยู่ใน กรุงเทพฯ กำลังมองหาโอกาสที่น่าตื่นเต้นในการทำงาน
+                                มีพื้นฐานการศึกษาด้านวิศวกรรมซอฟต์แวร์
+                            </Typography>
+                            <Typography sx={{ fontSize: '18px', fontFamily: 'Manrope', color: '#C7C7C7', lineHeight: '150%', mt: '16px' }}>
+                                ชอบให้ความสำคัญกับการเข้าถึง (accessibility) เมื่อพัฒนาเว็บไซต์ มีความกระตือรือร้นและอยากรู้ อยากเห็นเกี่ยวกับการแก้ปัญหาต่างๆ
+                                ปัจจุบันกำลังศึกษาเรียนรู้เกี่ยวกับ React.js และการออกแบบ เว็บไซต์เล็กน้อยเมื่อไม่ได้เขียนโปรแกรม
+                                ผมชอบเล่นฟุตบอล ถ่ายภาพ และเล่นเกม FIFA, Diablo กำลังเรียนรู้เพิ่มเติมเพื่อพัฒนาทักษะอยู่เสมอ
+                            </Typography>
+                        </Box>
+                        <Box sx={{ display: 'flex', mt:'40px'}}>
+                            <Button variant='contained' sx={{ fontSize: '16px', fontFamily: 'Manrope', fontWeight: 'bold', color: 'black', bgcolor: '#d3e07A', width: '244px', height: '54px', borderRadius: '100px', }}>
+                                DOWNLOAD RESUME <ArrowOutwardIcon />
+                            </Button>
+                            <Fab sx={{ bgcolor: '#222222', ml: '12px' }}>
+                                <LinkedInIcon sx={{ color: '#d3e07A' }} />
+                            </Fab>
+                            <Fab sx={{ bgcolor: '#222222', ml: '12px' }}>
+                                <GitHubIcon sx={{ color: '#d3e07A' }} />
+                            </Fab>
+                        </Box>
+                    </Box>
+                </Box>
+                <Avatar variant='square' src={MyProfile} sx={{ width: '1322px', height: '798px', mx: 'auto', borderRadius: '20px', mt: '48px', mb:'20px'}} />
+                <Box sx={{ width: '80%', borderBottom: '1px solid #484848', mx: 'auto', mt: '16px' }} />
+            </Box>
+
+
             {/*  My Capabilities */}
-            <Box sx={{ bgcolor: 'black', borderBottom: '1px solid #484848' }}>
+            <Box sx={{ bgcolor: 'black' }}>
                 <Box sx={{ display: 'flex' }}>
                     <Box sx={{ ml: '330px', my: '100px' }}>
                         <Box sx={{ width: '618.5px' }}>
@@ -110,7 +114,7 @@ function Profile() {
                             </Typography>
                         </Box>
                     </Box>
-                    <Box sx={{ my: '115px' }}>
+                    <Box sx={{ my: '115px'}}>
                         <Box sx={{ width: '618.5px' }}>
                             <Typography sx={{ fontSize: '17px', color: '#C7C7C7', fontFamily: 'Manrope' }}>
                                 ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆ อยู่เสมอ ทั้งการพัฒนาฟรอนท์เอนด์ แบล็กเอนต์ การออกแบบ UX/UI ฐานข้อมูล
@@ -144,11 +148,12 @@ function Profile() {
                         </Box>
                     </Box>
                 </Box>
+                <Box sx={{ width: '1440px', borderBottom: '1px solid #484848', mx: 'auto' }} />
             </Box>
 
 
             {/* MY EXPERIENCE */}
-            <Box sx={{ bgcolor: 'black', borderBottom: '1px solid #484848' }}>
+            <Box sx={{ bgcolor: 'black' }}>
                 <Box sx={{ display: 'flex' }}>
                     <Box sx={{ ml: '330px', my: '100px' }}>
                         <Box sx={{ width: '580px' }}>
@@ -157,7 +162,7 @@ function Profile() {
                             </Typography>
                         </Box>
                     </Box>
-                    <Box sx={{ my: '115px', mx: '30px' }}>
+                    <Box sx={{ my: '115px', mx: '50px' }}>
                         <Box sx={{ width: '580px' }}>
                             <Box sx={{ display: 'flex', justifyContent: 'space-between', my: '16px' }}>
                                 <Typography sx={{ fontSize: '24px', color: 'white', fontFamily: 'Manrope' }}>
@@ -194,10 +199,11 @@ function Profile() {
                         </Box>
                     </Box>
                 </Box>
+                <Box sx={{ width: '1440px', borderBottom: '1px solid #484848', mx: 'auto' }} />
             </Box>
 
             {/* LET'S CONNECT */}
-            <Box sx={{ bgcolor: 'black', borderBottom: '1px solid #484848' }}>
+            <Box sx={{ bgcolor: 'black' }}>
                 <Box sx={{ display: 'flex' }}>
                     <Box sx={{ ml: '330px', my: '100px' }}>
                         <Box sx={{ width: '627.5px' }}>
@@ -205,10 +211,11 @@ function Profile() {
                                 LET'S CONNECT
                             </Typography>
                             <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope' }}>
-                                Say hello at <Link> S6752D1006@sau.ac.th</Link>
+                                Say hello at <span style={{ textDecoration: 'underline 2px #D3E97A', color: '#FFFF' }}>S6752D1006@sau.ac.th</span>
                             </Typography>
-                            <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope' }}>
-                                For more info, here's my <Link> resume</Link>
+
+                            <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope', mt: '10px' }}>
+                                For more info, here's my <span style={{ textDecoration: 'underline 2px #D3E97A', color: '#FFFF' }}>resume</span>
                             </Typography>
                         </Box>
                         <Box sx={{ my: '40px' }}>
@@ -245,7 +252,7 @@ function Profile() {
                             <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Manrope', my: '20px' }}>
                                 Message
                             </Typography>
-                            <TextField variant="outlined" sx={{ bgcolor: '#1A1A1A', width: '627.5px', height: '156px' }}></TextField>
+                            <TextField multiline rows={6} variant='outlined' sx={{ bgcolor: '#1A1A1A', width: '627.5px', color: 'white' }}></TextField>
                         </Box>
                         <Button variant='contained' sx={{ fontSize: '16px', fontFamily: 'Manrope', fontWeight: 'bold', color: 'black', bgcolor: '#d3e07A', width: '140px', height: '54px', borderRadius: '100px', my: '30px', }}>
                             SUBMIT
