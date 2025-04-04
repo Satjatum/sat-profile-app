@@ -37,7 +37,7 @@ function Profile() {
             <Box sx={{ bgcolor: 'black', display: 'flex', flexDirection: 'column' }}>
                 <Container maxWidth="lg">
                     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'space-between', py: '120px' }}>
-                        <Box>
+                        <Box sx={{ mr: { md: '60px' } }}> {/* เพิ่ม margin-right สำหรับระยะห่าง */}
                             <Box sx={{ width: { xs: '100%', md: '580px' } }}>
                                 <Typography sx={{ fontSize: { xs: '48px', md: '101px' }, color: 'white', lineHeight: 1 }}>
                                     HI, I AM
@@ -127,7 +127,7 @@ function Profile() {
                         </Box>
 
                         <Box sx={{ my: '115px', width: '100%' }}>
-                            <Typography sx={{ fontSize: '17px', color: '#C7C7C7', fontFamily: 'Manrope' }}>
+                            <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Manrope' }}>
                                 ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆ อยู่เสมอ ทั้งการพัฒนาฟรอนท์เอนด์ แบล็กเอนต์ การออกแบบ UX/UI ฐานข้อมูล
                             </Typography>
                             <Box sx={{ my: '25px', display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
@@ -137,7 +137,7 @@ function Profile() {
                                 <Button variant="outlined" color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', fontFamily: 'Manrope' }}>
                                     CSS
                                 </Button>
-                                <Button variant="outlined" color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '175px', height: '56px', fontFamily: 'Manrope' }}>
+                                <Button variant="outlined" color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '150px', height: '56px', fontFamily: 'Manrope' }}>
                                     JAVASCRIPT
                                 </Button>
                                 <Button variant="outlined" color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', fontFamily: 'Manrope' }}>
