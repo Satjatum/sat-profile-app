@@ -5,8 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { Box, AppBar, Toolbar, Typography, Button, Avatar, Fab, TextField, Divider } from '@mui/material'
-import { Link } from 'react-router-dom';
+import { Box, AppBar, Toolbar, Typography, Button, Avatar, Fab, TextField, Container } from '@mui/material'
 
 
 function Profile() {
@@ -15,51 +14,59 @@ function Profile() {
             {/* Navigation */}
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position='static' sx={{ backgroundColor: 'black', height: '96px', justifyContent: 'center' }}>
-                    <Toolbar>
-                        <Typography sx={{ flexGrow: 1, fontSize: '32px', color: '#C7C7C7', ml: '250px' }}>
-                            SATJATUM KAOSAWANG
-                        </Typography>
-                        <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Inter', mr: '32px' }}>
-                            Work
-                        </Typography>
-                        <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Inter', mr: '32px' }}>
-                            About
-                        </Typography>
-                        <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Inter', mr: '230px' }}>
-                            Contact
-                        </Typography>
-                    </Toolbar>
+                    <Container maxWidth="lg">
+                        <Toolbar disableGutters>
+                            <Typography sx={{ flexGrow: 1, fontSize: '32px', color: '#C7C7C7', ml: 4 }}>
+                                SATJATUM KAOSAWANG
+                            </Typography>
+                            <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Inter', mr: '32px' }}>
+                                Work
+                            </Typography>
+                            <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Inter', mr: '32px' }}>
+                                About
+                            </Typography>
+                            <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Inter', mr: 4 }}>
+                                Contact
+                            </Typography>
+                        </Toolbar>
+                    </Container>
                 </AppBar>
             </Box>
 
             {/* Content */}
             <Box sx={{ bgcolor: 'black', display: 'flex', flexDirection: 'column' }}>
-                <Box sx={{ display: 'flex' }}>
-                    <Box sx={{ ml: '310px', my: '210px' }}>
-                        <Box sx={{ width: '580px' }}>
-                            <Typography sx={{ fontSize: '101px', color: 'white', lineHeight: 1 }}>
-                                HI, I AM
-                            </Typography>
-                            <Typography sx={{ fontSize: '101px', color: 'white', lineHeight: 1 }}>
-                                SATJATUM K.
-                            </Typography>
-                            <Typography sx={{ fontSize: '18px', fontFamily: 'Manrope', color: '#C7C7C7' }}>
-                                นักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์จากประเทศไทย ที่มีความหลงใหลในการสร้าง เว็บไซต์ที่เข้าถึงได้และเป็นมิตรกับผู้ใช้
-                            </Typography>
-                            <Button variant='contained' sx={{ fontSize: '16px', fontFamily: 'Manrope', fontWeight: 'bold', color: 'black', bgcolor: '#d3e07A', width: '187px', height: '54px', borderRadius: '100px', my: '40px', gap: '12px', }}> Contact Me <ArrowOutwardIcon />
-                            </Button>
-                            <Fab sx={{ bgcolor: '#222222', mx: '16px' }}>
-                                <LinkedInIcon sx={{ color: '#d3e07A' }} />
-                            </Fab>
-                            <Fab sx={{ bgcolor: '#222222' }}>
-                                <GitHubIcon sx={{ color: '#d3e07A' }} />
-                            </Fab>
+                <Container maxWidth="lg">
+                    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'space-between', py: '120px' }}>
+                        <Box>
+                            <Box sx={{ width: { xs: '100%', md: '580px' } }}>
+                                <Typography sx={{ fontSize: { xs: '48px', md: '101px' }, color: 'white', lineHeight: 1 }}>
+                                    HI, I AM
+                                </Typography>
+                                <Typography sx={{ fontSize: { xs: '48px', md: '101px' }, color: 'white', lineHeight: 1 }}>
+                                    SATJATUM K.
+                                </Typography>
+                                <Typography sx={{ fontSize: '18px', fontFamily: 'Manrope', color: '#C7C7C7', mt: 2 }}>
+                                    นักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์จากประเทศไทย ที่มีความหลงใหลในการสร้าง เว็บไซต์ที่เข้าถึงได้และเป็นมิตรกับผู้ใช้
+                                </Typography>
+                                <Button
+                                    variant='contained' sx={{ fontSize: '16px', fontFamily: 'Manrope', fontWeight: 'bold', color: 'black', bgcolor: '#d3e07A', width: '187px', height: '54px', borderRadius: '100px', my: '40px', gap: '12px' }}>
+                                    Contact Me <ArrowOutwardIcon />
+                                </Button>
+                                <Box component="span">
+                                    <Fab sx={{ bgcolor: '#222222', mx: '8px' }}>
+                                        <LinkedInIcon sx={{ color: '#d3e07A' }} />
+                                    </Fab>
+                                    <Fab sx={{ bgcolor: '#222222' }}>
+                                        <GitHubIcon sx={{ color: '#d3e07A' }} />
+                                    </Fab>
+                                </Box>
+                            </Box>
+                        </Box>
+                        <Box sx={{ mt: { xs: 4, md: 0 } }}>
+                            <Avatar variant='square' src={MyProfile} sx={{ width: '571.21px', height: '667px', borderRadius: '20px' }} />
                         </Box>
                     </Box>
-                    <Box>
-                        <Avatar variant='square' src={MyProfile} sx={{ width: '571.21px', height: '667px', my: '52px', ml: '60px', borderRadius: '20px', }} />
-                    </Box>
-                </Box>
+                </Container>
                 <Box sx={{ width: '1440px', borderBottom: '1px solid #484848', mx: 'auto' }} />
             </Box>
 
@@ -68,102 +75,105 @@ function Profile() {
 
             {/* About */}
             <Box sx={{ bgcolor: 'black', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <Box sx={{ display: 'flex', my: '50px' }}>
-                    <Box sx={{ width: '307px' }}>
-                        <Typography sx={{ fontSize: '101px', color: 'white' }}>
-                            ABOUT ME
-                        </Typography>
-                    </Box>
-                    <Box sx={{ ml: '200px', my: '50px' }}>
-                        <Box sx={{ width: '720px' }}>
-                            <Typography sx={{ fontSize: '32px', fontFamily: 'Manrope', color: 'white', lineHeight: '140%' }}>
-                                ผมเป็นนักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์ที่ทำงานอยู่ใน กรุงเทพฯ กำลังมองหาโอกาสที่น่าตื่นเต้นในการทำงาน
-                                มีพื้นฐานการศึกษาด้านวิศวกรรมซอฟต์แวร์
-                            </Typography>
-                            <Typography sx={{ fontSize: '18px', fontFamily: 'Manrope', color: '#C7C7C7', lineHeight: '150%', mt: '16px' }}>
-                                ชอบให้ความสำคัญกับการเข้าถึง (accessibility) เมื่อพัฒนาเว็บไซต์ มีความกระตือรือร้นและอยากรู้ อยากเห็นเกี่ยวกับการแก้ปัญหาต่างๆ
-                                ปัจจุบันกำลังศึกษาเรียนรู้เกี่ยวกับ React.js และการออกแบบ เว็บไซต์เล็กน้อยเมื่อไม่ได้เขียนโปรแกรม
-                                ผมชอบเล่นฟุตบอล ถ่ายภาพ และเล่นเกม FIFA, Diablo กำลังเรียนรู้เพิ่มเติมเพื่อพัฒนาทักษะอยู่เสมอ
+                <Container maxWidth="lg">
+                    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, my: '80px', alignItems: 'flex-start' }}>
+                        <Box sx={{ width: { xs: '100%', md: '307px' } }}>
+                            <Typography sx={{ fontSize: { xs: '48px', md: '101px' }, color: 'white' }}>
+                                ABOUT ME
                             </Typography>
                         </Box>
-                        <Box sx={{ display: 'flex', mt:'40px'}}>
-                            <Button variant='contained' sx={{ fontSize: '16px', fontFamily: 'Manrope', fontWeight: 'bold', color: 'black', bgcolor: '#d3e07A', width: '244px', height: '54px', borderRadius: '100px', }}>
-                                DOWNLOAD RESUME <ArrowOutwardIcon />
-                            </Button>
-                            <Fab sx={{ bgcolor: '#222222', ml: '12px' }}>
-                                <LinkedInIcon sx={{ color: '#d3e07A' }} />
-                            </Fab>
-                            <Fab sx={{ bgcolor: '#222222', ml: '12px' }}>
-                                <GitHubIcon sx={{ color: '#d3e07A' }} />
-                            </Fab>
+
+                        <Box sx={{ ml: { xs: 0, md: '120px' }, mt: { xs: '32px', md: '50px' }, flex: 1 }}>
+                            <Box sx={{ width: '100%' }}>
+                                <Typography sx={{ fontSize: { xs: '24px', md: '32px' }, fontFamily: 'Manrope', color: 'white', lineHeight: '140%' }}>
+                                    ผมเป็นนักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์ที่ทำงานอยู่ใน กรุงเทพฯ กำลังมองหาโอกาสที่น่าตื่นเต้นในการทำงาน
+                                    มีพื้นฐานการศึกษาด้านวิศวกรรมซอฟต์แวร์
+                                </Typography>
+                                <Typography sx={{ fontSize: '18px', fontFamily: 'Manrope', color: '#C7C7C7', lineHeight: '150%', mt: '16px' }}>
+                                    ชอบให้ความสำคัญกับการเข้าถึง (accessibility) เมื่อพัฒนาเว็บไซต์ มีความกระตือรือร้นและอยากรู้ อยากเห็นเกี่ยวกับการแก้ปัญหาต่างๆ
+                                    ปัจจุบันกำลังศึกษาเรียนรู้เกี่ยวกับ React.js และการออกแบบ เว็บไซต์เล็กน้อยเมื่อไม่ได้เขียนโปรแกรม
+                                    ผมชอบเล่นฟุตบอล ถ่ายภาพ และเล่นเกม FIFA, Diablo กำลังเรียนรู้เพิ่มเติมเพื่อพัฒนาทักษะอยู่เสมอ
+                                </Typography>
+                            </Box>
+
+                            <Box sx={{ display: 'flex', flexWrap: 'wrap', mt: '40px', alignItems: 'center' }}>
+                                <Button variant='contained' sx={{ fontSize: '16px', fontFamily: 'Manrope', fontWeight: 'bold', color: 'black', bgcolor: '#d3e07A', width: '244px', height: '54px', borderRadius: '100px', mr: '12px', mb: { xs: '12px', md: 0 } }}>
+                                    DOWNLOAD RESUME <ArrowOutwardIcon />
+                                </Button>
+                                <Fab sx={{ bgcolor: '#222222', mr: '12px' }}>
+                                    <LinkedInIcon sx={{ color: '#d3e07A' }} />
+                                </Fab>
+                                <Fab sx={{ bgcolor: '#222222' }}>
+                                    <GitHubIcon sx={{ color: '#d3e07A' }} />
+                                </Fab>
+                            </Box>
                         </Box>
                     </Box>
-                </Box>
-                <Avatar variant='square' src={MyProfile} sx={{ width: '1322px', height: '798px', mx: 'auto', borderRadius: '20px', mt: '48px', mb:'20px'}} />
-                <Box sx={{ width: '80%', borderBottom: '1px solid #484848', mx: 'auto', mt: '16px' }} />
+                </Container>
+
+                <Avatar variant='square' src={MyProfile} sx={{ width: '100%', maxWidth: '1322px', height: '748px', borderRadius: '20px', mt: '48px', mb: '20px' }} />
+                <Box sx={{ width: '1440px', borderBottom: '1px solid #484848', mx: 'auto' }} />
             </Box>
 
 
             {/*  My Capabilities */}
             <Box sx={{ bgcolor: 'black' }}>
-                <Box sx={{ display: 'flex' }}>
-                    <Box sx={{ ml: '330px', my: '100px' }}>
-                        <Box sx={{ width: '618.5px' }}>
-                            <Typography sx={{ fontSize: '76px', color: 'white' }}>
+                <Container maxWidth="lg">
+                    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
+                        <Box sx={{ my: '100px', width: '100%' }}>
+                            <Typography sx={{ fontSize: { xs: '48px', md: '76px' }, color: 'white' }}>
                                 My Capabilities
                             </Typography>
                         </Box>
-                    </Box>
-                    <Box sx={{ my: '115px'}}>
-                        <Box sx={{ width: '618.5px' }}>
+
+                        <Box sx={{ my: '115px', width: '100%' }}>
                             <Typography sx={{ fontSize: '17px', color: '#C7C7C7', fontFamily: 'Manrope' }}>
                                 ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆ อยู่เสมอ ทั้งการพัฒนาฟรอนท์เอนด์ แบล็กเอนต์ การออกแบบ UX/UI ฐานข้อมูล
                             </Typography>
-                            <Box sx={{ my: '25px' }}>
-                                <Button variant='outlined' color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', mr: '16px', my: '16px', fontFamily: 'Manrope' }}>
+                            <Box sx={{ my: '25px', display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+                                <Button variant="outlined" color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', fontFamily: 'Manrope' }}>
                                     HTML
                                 </Button>
-                                <Button variant='outlined' color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', mr: '16px', fontFamily: 'Manrope' }}>
+                                <Button variant="outlined" color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', fontFamily: 'Manrope' }}>
                                     CSS
                                 </Button>
-                                <Button variant='outlined' color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '175px', height: '56px', mr: '16px', fontFamily: 'Manrope' }}>
+                                <Button variant="outlined" color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '175px', height: '56px', fontFamily: 'Manrope' }}>
                                     JAVASCRIPT
                                 </Button>
-                                <Button variant='outlined' color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', mr: '16px', fontFamily: 'Manrope' }}>
+                                <Button variant="outlined" color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', fontFamily: 'Manrope' }}>
                                     FLUTTER
                                 </Button>
-                                <Button variant='outlined' color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', mr: '16px', fontFamily: 'Manrope' }}>
+                                <Button variant="outlined" color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', fontFamily: 'Manrope' }}>
                                     DART
                                 </Button>
-                                <Button variant='outlined' color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', mr: '16px', fontFamily: 'Manrope' }}>
+                                <Button variant="outlined" color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', fontFamily: 'Manrope' }}>
                                     IoT
                                 </Button>
-                                <Button variant='outlined' color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', mr: '16px', fontFamily: 'Manrope' }}>
+                                <Button variant="outlined" color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', fontFamily: 'Manrope' }}>
                                     REACT
                                 </Button>
-                                <Button variant='outlined' color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', mr: '16px', fontFamily: 'Manrope' }}>
+                                <Button variant="outlined" color="#484848" sx={{ color: 'white', borderRadius: '100px', fontSize: '16px', width: '124px', height: '56px', fontFamily: 'Manrope' }}>
                                     DATABASE
                                 </Button>
                             </Box>
                         </Box>
                     </Box>
-                </Box>
+                </Container>
                 <Box sx={{ width: '1440px', borderBottom: '1px solid #484848', mx: 'auto' }} />
             </Box>
 
 
             {/* MY EXPERIENCE */}
             <Box sx={{ bgcolor: 'black' }}>
-                <Box sx={{ display: 'flex' }}>
-                    <Box sx={{ ml: '330px', my: '100px' }}>
-                        <Box sx={{ width: '580px' }}>
-                            <Typography sx={{ fontSize: '76px', color: 'white' }}>
+                <Container maxWidth="lg">
+                    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'flex-start' }}>
+                        <Box sx={{ my: '100px', width: '100%' }}>
+                            <Typography sx={{ fontSize: { xs: '48px', md: '76px' }, color: 'white' }}>
                                 My Experience
                             </Typography>
                         </Box>
-                    </Box>
-                    <Box sx={{ my: '115px', mx: '50px' }}>
-                        <Box sx={{ width: '580px' }}>
+
+                        <Box sx={{ my: '115px', mx: { xs: '20px', md: '50px' }, width: '100%' }}>
                             <Box sx={{ display: 'flex', justifyContent: 'space-between', my: '16px' }}>
                                 <Typography sx={{ fontSize: '24px', color: 'white', fontFamily: 'Manrope' }}>
                                     Freelance Developer
@@ -178,6 +188,7 @@ function Profile() {
                                 ปรับปรุงความเร็วในการโหลดเว็บไซต์ด้วยเทคนิคการเพิ่มประสิทธิภาพต่างๆ
                                 ร่วมพัฒนาและดูแลไลบรารีคอมโพเนนต์ภายในองค์กร
                             </Typography>
+
                             <Box sx={{ display: 'flex', justifyContent: 'space-between', my: '16px' }}>
                                 <Typography sx={{ fontSize: '24px', color: 'white', fontFamily: 'Manrope' }}>
                                     Front-End Intern
@@ -185,82 +196,77 @@ function Profile() {
                                 <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope' }}>
                                     Sep 2023 — Nov 2023
                                 </Typography>
-
                             </Box>
-                            <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope', }}>
+                            <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope' }}>
                                 พัฒนาเว็บไซต์ลูกค้าโดยใช้ HTML, CSS และ JavaScript
                             </Typography>
-                            <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope', }}>
+                            <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope' }}>
                                 ช่วยปรับปรุงการเข้าถึง (Accessibility) ของเว็บไซต์ให้สอดคล้องกับมาตรฐาน WCAG
                             </Typography>
-                            <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope', }}>
+                            <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope' }}>
                                 ทำงานร่วมกับทีมแบ็คเอนด์เพื่อเชื่อมต่อ API
                             </Typography>
                         </Box>
                     </Box>
-                </Box>
+                </Container>
                 <Box sx={{ width: '1440px', borderBottom: '1px solid #484848', mx: 'auto' }} />
             </Box>
 
-            {/* LET'S CONNECT */}
-            <Box sx={{ bgcolor: 'black' }}>
-                <Box sx={{ display: 'flex' }}>
-                    <Box sx={{ ml: '330px', my: '100px' }}>
-                        <Box sx={{ width: '627.5px' }}>
-                            <Typography sx={{ fontSize: '76px', color: 'white' }}>
-                                LET'S CONNECT
-                            </Typography>
-                            <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope' }}>
-                                Say hello at <span style={{ textDecoration: 'underline 2px #D3E97A', color: '#FFFF' }}>S6752D1006@sau.ac.th</span>
-                            </Typography>
 
-                            <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope', mt: '10px' }}>
-                                For more info, here's my <span style={{ textDecoration: 'underline 2px #D3E97A', color: '#FFFF' }}>resume</span>
-                            </Typography>
+            {/* LET'S CONNECT */}
+            <Box sx={{ bgcolor: 'black', minHeight: '100vh', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+                <Container maxWidth="lg" sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', px: { xs: 2, md: 0 }, py: { xs: 4, md: 6 } }}>
+                    <Box sx={{ flex: 1, mb: { xs: '40px', md: '0' }, maxWidth: '600px' }}>
+                        <Typography sx={{ fontSize: { xs: '48px', md: '76px' }, color: 'white', wordBreak: 'break-word' }}>
+                            LET'S CONNECT
+                        </Typography>
+                        <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope', mt: '16px' }}>
+                            Say hello at <span style={{ textDecoration: 'underline 2px #D3E97A', color: '#FFFF' }}>S6752D1006@sau.ac.th</span>
+                        </Typography>
+
+                        <Typography sx={{ fontSize: '18px', color: '#C7C7C7', fontFamily: 'Manrope', mt: '10px' }}>
+                            For more info, here's my <span style={{ textDecoration: 'underline 2px #D3E97A', color: '#FFFF' }}>resume</span>
+                        </Typography>
+
+                        <Box sx={{ display: 'flex', justifyContent: 'flex-start', my: '40px', gap: '16px' }}>
+                            <LinkedInIcon sx={{ color: '#d3e07A', fontSize: '32px' }} />
+                            <GitHubIcon sx={{ color: '#d3e07A', fontSize: '32px' }} />
+                            <XIcon sx={{ color: '#d3e07A', fontSize: '32px' }} />
+                            <InstagramIcon sx={{ color: '#d3e07A', fontSize: '32px' }} />
                         </Box>
-                        <Box sx={{ my: '40px' }}>
-                            <LinkedInIcon sx={{ color: '#d3e07A', mr: '24px', fontSize: '32px' }} />
-                            <GitHubIcon sx={{ color: '#d3e07A', mr: '24px', fontSize: '32px' }} />
-                            <XIcon sx={{ color: '#d3e07A', mr: '24px', fontSize: '32px' }} />
-                            <InstagramIcon sx={{ color: '#d3e07A', mr: '24px', fontSize: '32px' }} />
-                        </Box>
-                        <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Manrope', mt: '430px' }}>
+
+                        <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Manrope', mt: '330px' }}>
                             © 2025 Satjatum Kaosawang
                         </Typography>
                     </Box>
 
-                    <Box sx={{ my: '100px' }}>
-                        <Box>
-                            <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Manrope', my: '20px' }}>
-                                Name
-                            </Typography>
-                            <TextField variant="outlined" sx={{ bgcolor: '#1A1A1A', width: '627.5px' }}></TextField>
+                    <Box sx={{ flex: 1, maxWidth: '600px' }}>
+                        <Box sx={{ my: '16px' }}>
+                            <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Manrope', mb: '8px' }}>Name</Typography>
+                            <TextField variant="outlined" sx={{ bgcolor: '#1A1A1A', width: '100%' }} />
                         </Box>
-                        <Box sx={{ my: '30px' }}>
-                            <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Manrope', my: '20px' }}>
-                                Email
-                            </Typography>
-                            <TextField variant="outlined" sx={{ bgcolor: '#1A1A1A', width: '627.5px' }}></TextField>
+                        <Box sx={{ my: '16px' }}>
+                            <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Manrope', mb: '8px' }}>Email</Typography>
+                            <TextField variant="outlined" sx={{ bgcolor: '#1A1A1A', width: '100%' }} />
                         </Box>
-                        <Box sx={{ my: '30px' }}>
-                            <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Manrope', my: '20px' }}>
-                                Subject
-                            </Typography>
-                            <TextField variant="outlined" sx={{ bgcolor: '#1A1A1A', width: '627.5px' }}></TextField>
+                        <Box sx={{ my: '16px' }}>
+                            <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Manrope', mb: '8px' }}>Subject</Typography>
+                            <TextField variant="outlined" sx={{ bgcolor: '#1A1A1A', width: '100%' }} />
                         </Box>
-                        <Box sx={{ my: '30px' }}>
-                            <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Manrope', my: '20px' }}>
-                                Message
-                            </Typography>
-                            <TextField multiline rows={6} variant='outlined' sx={{ bgcolor: '#1A1A1A', width: '627.5px', color: 'white' }}></TextField>
+                        <Box sx={{ my: '16px' }}>
+                            <Typography sx={{ fontSize: '16px', color: '#C7C7C7', fontFamily: 'Manrope', mb: '8px' }}>Message</Typography>
+                            <TextField multiline rows={6} variant="outlined" sx={{ bgcolor: '#1A1A1A', width: '100%', color: 'white' }} />
                         </Box>
-                        <Button variant='contained' sx={{ fontSize: '16px', fontFamily: 'Manrope', fontWeight: 'bold', color: 'black', bgcolor: '#d3e07A', width: '140px', height: '54px', borderRadius: '100px', my: '30px', }}>
+                        <Button variant="contained" sx={{ fontSize: '16px', fontFamily: 'Manrope', fontWeight: 'bold', color: 'black', bgcolor: '#d3e07A', width: '140px', height: '54px', borderRadius: '100px', my: '30px' }}>
                             SUBMIT
                         </Button>
                     </Box>
-
-                </Box>
+                </Container>
             </Box>
+
+
+
+
         </>
     )
 }
