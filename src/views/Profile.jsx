@@ -37,7 +37,7 @@ function Profile() {
             <Box sx={{ bgcolor: 'black', display: 'flex', flexDirection: 'column' }}>
                 <Container maxWidth="lg">
                     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'space-between', py: '120px' }}>
-                        <Box sx={{ mr: { md: '60px' } }}> {/* เพิ่ม margin-right สำหรับระยะห่าง */}
+                        <Box sx={{ mr: { md: '60px' } }}>
                             <Box sx={{ width: { xs: '100%', md: '580px' } }}>
                                 <Typography sx={{ fontSize: { xs: '48px', md: '101px' }, color: 'white', lineHeight: 1 }}>
                                     HI, I AM
